@@ -1,0 +1,41 @@
+<h2>Edit an Author</h2>
+
+<h4 style="color:red">{{message}}</h4>
+
+<div>
+  <form (submit)="onEdit(thispet)" style="font-size: 20px;">
+
+    <table style="border: 5px solid rgb(62, 170, 226); margin: 2% 0% 0% 35%; height: 350px; width:700px;">
+      <tr style="margin: 2%;">
+        <th>Pet Name:</th>
+        <td><input style="font-size: 18px;" type="text" name="thispet.name" [(ngModel)]="thispet.name" /></td>
+      </tr>
+      <tr>
+        <th>Pet Type:</th>
+        <td><input style="font-size: 18px;" type="text" name="thispet.pettype" [(ngModel)]="thispet.pettype" /></td>
+      </tr>
+      <tr>
+        <th>Description:</th>
+        <td><input style="font-size: 18px;" type="text" name="thispet.description" [(ngModel)]="thispet.description" /></td>
+      </tr>
+      <tr>
+        <th>Add skills 1:</th>
+        <td><input style="font-size: 18px;" type="text" name="thispet.skill1" [(ngModel)]="thispet.skill1" /></td>
+      </tr>
+      <tr>
+        <th>Add skills 2:</th>
+        <td><input style="font-size: 18px;" type="text" name="thispet.skill2" [(ngModel)]="thispet.skill2" /></td>
+      </tr>
+      <tr>
+        <th>Add skills 3:</th>
+        <td><input style="font-size: 18px;" type="text" name="thispet.skill3" [(ngModel)]="thispet.skill3" /></td>
+      </tr>
+
+      <tr>
+        <td><button [routerLink]="['']">Cancel</button> </td>
+        <td><input style="font-size: 25px;" type="submit" value="Edit {{thispet.name}}'s Info'" /></td>
+      </tr>
+    </table>
+
+</form>
+</div>
